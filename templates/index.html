@@ -72,10 +72,10 @@
                 </tr>
             </thead>
             <tbody>
-                
+
                 {% for task in tasks %}
                 <tr>
-                    <th scope="row">1</th>
+                    <th scope="row">{{forloop.counter}}</th>
                     <td>{{task.taskName}}</td>
                     <td>{{task.dateTime}}</td>
                     <td>{{task.about}}</td>
