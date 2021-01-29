@@ -21,6 +21,7 @@ def index(request):
 def wip(request, slug):
     update = AllTask.objects.get(slug=slug)
     update.status = "WIP"
+    update.sColor = "primary"
     update.save()
     home = redirect("/")
     return home

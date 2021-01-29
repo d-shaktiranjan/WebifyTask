@@ -8,6 +8,7 @@ class AllTask(models.Model):
     subDateTime = models.DateTimeField(blank=True, null=True)
     status = models.CharField(max_length=10)
     slug = models.CharField(max_length=80)
+    sColor = models.CharField(max_length=10)
 
     def __str__(self):
         return self.taskName
