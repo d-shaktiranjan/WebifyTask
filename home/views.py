@@ -25,3 +25,17 @@ def wip(request, slug):
     update.save()
     home = redirect("/")
     return home
+
+def finish(request, slug):
+    update = AllTask.objects.get(slug=slug)
+    update.status = "Finish"
+    update.sColor = "success"
+    update.save()
+    home = redirect("/")
+    return home
+
+def delete(request, slug):
+    update = AllTask.objects.get(slug=slug)
+    update.delete()
+    home = redirect("/")
+    return home
