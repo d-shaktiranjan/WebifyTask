@@ -84,9 +84,9 @@
                     <td class="bg-{{task.sColor}}">{{task.status}}</td>
                     <td>
                         <div class="btn-group" role="group" aria-label="Basic example">
-                            <a href="/wip/{{task.slug}}" type="button" class="btn btn-primary">WIP</a href="/srd">
-                            <a href="/finish/{{task.slug}}" type="button" class="btn btn-success">Finished</a>
-                            <a href="/delete/{{task.slug}}" type="button" class="btn btn-danger">Delete</a>
+                            <button onclick="location.href='/wip/{{task.slug}}'" type="button" class="btn btn-primary">WIP</button>
+                            <button onclick="location.href='/finish/{{task.slug}}'" type="button" class="btn btn-success">Finished</button>
+                            <button onclick="location.href='/delete/{{task.slug}}'" type="button" class="btn btn-danger">Delete</button>
                         </div>
                     </td>
                 </tr>
