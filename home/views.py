@@ -14,7 +14,7 @@ def index(request):
         about = request.POST.get('about')
         date = request.POST.get('date')
         slug = getSlug(name, about)
-        addNew = AllTask(taskName = name, about = about, subDateTime = datetime.now(), status = "Init", dateTime = datetime.now(), slug = slug)
+        addNew = AllTask(taskName = name, about = about, sColor= "warning", status = "Init", dateTime = datetime.now(), slug = slug)
         addNew.save()
     return render(request, 'index.html', dict)
 
