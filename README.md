@@ -3,7 +3,8 @@
 ## Download & Install Python:
 ## <a href="https://www.python.org/downloads/">Python</a>
 
-
+# Quick Demo
+![Demo](./images/demo.gif "Demo")
 ## Install Django:
 ```bash
 pip install Django
