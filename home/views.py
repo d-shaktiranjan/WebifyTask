@@ -16,6 +16,7 @@ def index(request):
         slug = getSlug(name, about)
         addNew = AllTask(taskName = name, about = about, sColor= "warning", status = "Init", dateTime = datetime.now(), slug = slug)
         addNew.save()
+        return redirect("index")
     return render(request, 'index.html', dict)
 
 def wip(request, slug):
