@@ -1,0 +1,18 @@
+:root {
+    --paddingUniv: 0.5rem;
+}
+
+.status {
+    text-align: center;
+    padding: var(--paddingUniv);
+    width: 6rem;
+    border-radius: var(--paddingUniv);
+    font-weight: bold;
+    color: white;
+    height: 42px;
+}
+
+.btn {
+    padding: var(--paddingUniv);
+    border-radius: var(--paddingUniv);
+}
