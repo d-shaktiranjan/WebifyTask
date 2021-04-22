@@ -1,4 +1,10 @@
 from home.models import AllTask
+from random import randint
+
+
+def checkSlug(word):
+    status = AllTask.objects.filter(slug=word)
+    return bool(status)
 
 
 def formatWord(word):
@@ -13,4 +19,12 @@ def formatWord(word):
 
 def getSlug(name, about):
     slug = formatWord(name) + formatWord(about)
-    return slug
+    return newSlug(slug)
+
+
+def newSlug(word):
+    if checkSlug(word):
+        word += str(randint(0, 100))
+        if checkSlug(word):
+            return newSlug(word)
+    return word
