@@ -1,6 +1,8 @@
 from django.db import models
 
 # Create your models here.
+
+
 class AllTask(models.Model):
     taskName = models.CharField(max_length=30)
     about = models.CharField(max_length=50)
@@ -12,4 +14,3 @@ class AllTask(models.Model):
 
     def __str__(self):
         return self.taskName
-    

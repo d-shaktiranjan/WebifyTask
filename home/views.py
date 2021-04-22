@@ -4,20 +4,24 @@ from django.shortcuts import render, redirect
 from home.models import AllTask
 from datetime import datetime
 from home.mixSlug import getSlug
+
+
 def index(request):
     tasks = AllTask.objects.all()
     dict = {
-        'tasks' : tasks,
+        'tasks': tasks,
     }
     if request.method == "POST":
         name = request.POST.get('name')
         about = request.POST.get('about')
         date = request.POST.get('date')
         slug = getSlug(name, about)
-        addNew = AllTask(taskName = name, about = about, sColor= "warning", status = "Init", dateTime = datetime.now(), slug = slug)
+        addNew = AllTask(taskName=name, about=about, sColor="warning",
+                         status="Init", dateTime=datetime.now(), slug=slug)
         addNew.save()
         return redirect("index")
     return render(request, 'index.html', dict)
+
 
 def wip(request, slug):
     update = AllTask.objects.get(slug=slug)
@@ -27,6 +31,7 @@ def wip(request, slug):
     home = redirect("/")
     return home
 
+
 def finish(request, slug):
     update = AllTask.objects.get(slug=slug)
     update.status = "Finish"
@@ -34,6 +39,7 @@ def finish(request, slug):
     update.save()
     home = redirect("/")
     return home
+
 
 def delete(request, slug):
     update = AllTask.objects.get(slug=slug)
