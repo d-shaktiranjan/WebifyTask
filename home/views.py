@@ -34,7 +34,7 @@ def wip(request, slug):
 
 def finish(request, slug):
     update = AllTask.objects.get(slug=slug)
-    update.status = "Finish"
+    update.status = "Finished"
     update.sColor = "success"
     update.save()
     home = redirect("/")

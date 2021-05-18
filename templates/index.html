@@ -94,13 +94,13 @@
                     <td class="align-middle">
                         <div class="btn-group" role="group" aria-label="Basic example">
                             <button onclick="location.href='/wip/{{task.slug}}'" type="button" class="btn btn-primary"
-                            {% if task.status == "Finish" or task.status == "WIP"%}
+                            {% if task.status == "Finished" or task.status == "WIP"%}
                             disabled
                             {% endif %}>WIP</button>
                             <button onclick="location.href='/finish/{{task.slug}}'" type="button" class="btn btn-success"
-                            {% if task.status == "Finish"%}
+                            {% if task.status == "Finished"%}
                             disabled
-                            {% endif %}>Finished</button>
+                            {% endif %}>Finish</button>
                             <button onclick="location.href='/delete/{{task.slug}}'" type="button" class="btn btn-danger">Delete</button>
                         </div>
                     </td>

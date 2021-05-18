@@ -8,7 +8,7 @@
 
 ## Install Django:
 ```bash
-pip install Django
+pip install django
 ```
 
 ## Migrate:
