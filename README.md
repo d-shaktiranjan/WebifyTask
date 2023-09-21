@@ -3,22 +3,21 @@
 
 # Setup
 
-## Download & Install Python:
-## <a href="https://www.python.org/downloads/">Python</a>
+### Download & Install Python:
+### <a href="https://www.python.org/downloads/">Python</a>
 
-## Install Django:
+### Install Django:
 ```bash
 pip install django
 ```
 
-## Migrate:
+### Migrate:
 ```bash
 python manage.py migrate
 ```
 
-## Run Development Server
+### Run Development Server
 
 ```bash
 python manage.py runserver
 ```
-## Public endpoint is at http://127.0.0.1:8000/
